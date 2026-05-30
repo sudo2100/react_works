@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반환값이 있는 함수</title>
+</head>
+<body>
+  <h2>Function - return</h2>
+  <div id="demo"></div>
+  <button onclick="message()">확인</button>
+
+  <script>
+    //메시지 출력
+    // demo 선택자로 div태그 선택
+    let demo = document.getElementById("demo");
+
+    function message(){
+      return demo.innerHTML = "<h3>Good Luck!</h3>"
+    }
+
+    //console.log(message()); //콘솔 출력
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+/* 전체 영역 크기 */
+.container{
+  width: 800px; /* 넓이 */
+  /* 바깥여백설정: 위, 아래 - 0px, 왼쪽,오른쪽: 자동여백설정 */
+  margin: 0 auto;
+}
+/* 16진수 색상표기: ff-255, 00-0 */
+h2{color: #ff0000}
+p{
+  line-height: 2; /* 줄간격 - 2(2배) */
+  font-family: 바탕체;
+}
+/* 선택자 - id인 경우는 #(샵)을 앞에 붙이고, class 인경우는 .(점)을 붙임 */
+#p1{
+  background-color: greenyellow;
+}
+#p2{
+  background-color: yellow;
+}
+.accent{
+  color: #ff0000;
+  font-weight: bold;
+}

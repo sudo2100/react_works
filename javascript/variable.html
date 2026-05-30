@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>변수와 자료형</title>
+</head>
+
+<body>
+  <h2>변수와 자료형</h2>
+
+  <script>
+    //변수 선언 - 자료형 표기는 var, let을 사용
+    var name = "Alice";  //문자형
+    var age = 30; //숫자형
+    let isStudent = false; //불리언
+
+    //출력
+    console.log("Name:", name);
+    console.log("Age:", age);
+    console.log("Is Student", isStudent);
+
+    //호이스팅(끌어 올려짐)
+    console.log(x); //undefined(할당하지 않음)
+    var x = 5;
+
+    //let을 사용하면 호이스팅 되지 않음
+    //console.log(y);
+    //let y = 10;
+
+    //상수(constant variable) 선언
+    const z = 20;
+    //z = 50;  //상수는 재할당할 수 없음
+  </script>
+</body>
+
+</html>
