@@ -1,4 +1,5 @@
 import { useState } from "react";
+import DrinkList from "./DrinkList";
 
 const Drinks2 = () => {
   //음료 리스트 상태 관리 - 빈 리스트(초기화)
@@ -18,6 +19,7 @@ const Drinks2 = () => {
     //입력값은 newDrink에 저장
     const newDrink = inputValue;
 
+    //입력 필드 검사(유효성 검사)
     if(newDrink == ''){
       alert("음료를 입력해주세요.");
       return;  //즉시 종료
@@ -39,12 +41,15 @@ const Drinks2 = () => {
       />
       {/* <p>입력된 음료: {inputValue}</p> */}
       <button onClick={addDrink}>음료 추가</button>
+
       {/* 음료 목록 */}
-      <ul>
+      {/* DrinkList 컴포넌트 연결 - drinks props 사용 */}
+      <DrinkList drinks={drinks} />
+      {/* <ul>
         {drinks.map((drink, index) => (
           <li key={index}>{drink}</li>
         ))}
-      </ul>
+      </ul> */}
     </div>
   )
 }

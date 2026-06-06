@@ -10,3 +10,15 @@ ul li{
 button{
   margin: 5px;
 }
+/* img태그는 inline 태그이므로 수직으로 바꿔줌 */
+.avatar{
+  display: block; /* 수직 */
+  border-radius: 5px;
+}
+.card{
+  border: 3px solid #06cccc;
+  border-radius: 10px;;
+  max-width: 400px; /* Card는 최대 400px까지 커짐 */
+  padding: 10px;
+  margin: 10px auto; /* 가운데 배치 */
+}

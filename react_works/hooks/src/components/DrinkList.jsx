@@ -1,0 +1,16 @@
+
+// 리엑트 Props - 매개변수로 속성(prop)이 전달됨
+const DrinkList = ({drinks}) => {
+
+  return(
+    <div>
+      <ul>
+        {drinks.map((drink, index) => (
+          <li key={index}>{drink}</li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+
+export default DrinkList;
