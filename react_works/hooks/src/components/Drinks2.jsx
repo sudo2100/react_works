@@ -9,6 +9,7 @@ const Drinks2 = () => {
 
   //입력값 변경 함수
   const inputValueChange = (e) => {
+    console.log("음료:", e.target.value); //event 속성
     setInputValue(e.target.value);
   }
 
@@ -16,6 +17,12 @@ const Drinks2 = () => {
   const addDrink = () => {
     //입력값은 newDrink에 저장
     const newDrink = inputValue;
+
+    if(newDrink == ''){
+      alert("음료를 입력해주세요.");
+      return;  //즉시 종료
+    }
+
     setDrinks([...drinks, newDrink]);
     //입력값 초기화
     setInputValue('');
