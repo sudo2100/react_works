@@ -13,11 +13,17 @@ const FetchTodoById = () => {
       console.log(result);
     })
     .catch((error) => console.error(error)); //오류 처리
-  }, [id])
+  }, [id])  //id가 바뀔때마다 렌더링(실행)
 
   return(
     <div>
       <h2>할 일(To-do) 데이터</h2>
+      {data && (
+        <div>
+          <p>제목: {data.title}</p>
+          <p>완료여부: {data.completed ? " ● 완료" : " ○ 미완료"}</p>
+        </div>
+      )}
     </div>
   )
 }

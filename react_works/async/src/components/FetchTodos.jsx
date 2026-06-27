@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const FetchTodos = () => {
+  //data 상태 배열로 관리
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -9,7 +11,6 @@ const FetchTodos = () => {
       .then((result) => {
         setData(result); //변환된 데이터를 상태에 저장
         console.log(result);
-        
       })
       .catch((error) => console.log(error)); //에러 처리
   }, []); //마운트될때 한 번만 실행
@@ -19,7 +20,9 @@ const FetchTodos = () => {
       <h2>할 일 데이터 목록</h2>
       <ul>
         {data.map((todo) => (
-          <li key={todo.id}>{todo.title}</li>
+          <li key={todo.id}>
+            <Link to={`/${todo.id}`}>{todo.title}</Link>
+          </li>
         ))}
       </ul>
     </div>
