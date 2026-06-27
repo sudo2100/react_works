@@ -7,6 +7,9 @@ import Home from './layouts/Home'
 import About from './layouts/About'
 import Board from './layouts/Board'
 import BoardById from './layouts/BoardById'
+import AxiosTodos from './components/AxiosTodos'
+import AxiosTodoById from './components/AxiosTodoById'
+import AxiosPost from './components/AxiosPost'
 
 function App() {
 
@@ -14,20 +17,28 @@ function App() {
     <>
       <section className="app">
         <BrowserRouter>
-          <div className='header'>
+          <Routes>
+            {/* fetch() 사용 */}
+            {/* <Route path='/' element={<FetchTodos />} />
+            <Route path='/:id' element={<FetchTodoById />} /> */}
+
+            {/* axios() 사용 */}
+            <Route path='/axios' element={<AxiosTodos />} />
+            <Route path='/axios/:id' element={<AxiosTodoById />} />
+            <Route path='/axios-post' element={<AxiosPost />} />
+          </Routes>
+
+          {/* 연습 문제 */}
+          {/* <div className='header'>
             <Link to="/">Home</Link>
             <Link to="/about">About</Link>
             <Link to="/board">Board</Link>
-          </div>
-          <Routes>
+          </div> */}
+          {/* <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/about' element={<About />} />
             <Route path='/board' element={<Board />} />
             <Route path='/board/:id' element={<BoardById />} />
-          </Routes>
-           {/* <Routes>
-            <Route path='/' element={<FetchTodos />} />
-            <Route path='/:id' element={<FetchTodoById />} />
           </Routes> */}
         </BrowserRouter>
       </section>
